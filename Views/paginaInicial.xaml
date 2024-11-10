@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.paginaInicial"
+             Title="paginaInicial"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0B004C">
+    
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label 
+            Text="Bem-vindo ao Hotel Beiramar"
+            VerticalOptions="Center" FontSize="28"
+            TextColor="white" FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Frame>
+            <VerticalStackLayout>
+                <Image Source="hotel.jpg"/>
+                <Label Text="Seu 5 estrelas na beira da praia"
+                     TextColor="#0B004C" FontSize="20"/>
+
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Faça sua reserva já" Padding="20"
+                BackgroundColor="#C1FFF3" FontSize="22"
+                TextColor="#0B004C" FontAttributes="Bold"
+                Clicked="Button_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0B004C">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10"
+                         Spacing="5">
+        <Label Text="Hotel Beiramar"
+       FontSize="40"
+       TextColor="#FFFFFF" FontAttributes="Bold" />
+
+        <Label Text="Escolha sua estadia em nosso hotel"
+               FontSize="16"
+               TextColor="#FFFFFF"/>
+
+        <Frame Padding="10">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, *">
+
+                    <Label Grid.Row="0" Grid.Column="0" TextColor="#0B004C"
+                           Text="Adultos:" />
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           TextColor="#0B004C" FontAttributes="Bold"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+
+                    <Label Grid.Row="1" Grid.Column="0" TextColor="#0B004C"
+                           Text="Crianças:" />
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           TextColor="#0B004C" FontAttributes="Bold"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_criancas}"/>
+
+                    <Stepper Grid.Row="1" Grid.Column="2"
+                             x:Name="stp_criancas"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+                </Grid>
+
+                <Frame Padding="10" Margin="10" BackgroundColor="#F9F9F9">
+                    <VerticalStackLayout>
+
+                        <Label Text="Escolha seu quarto" FontAttributes="Bold"
+                               FontSize="Subtitle"
+                               TextColor="#0B004C"/>
+                        <Label/>
+
+                        <Picker x:Name="pck_quarto"
+                                FontSize="14"
+                                ItemDisplayBinding="{Binding Descricao}"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="#F9F9F9"
+                       Margin="10">
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label Text="Período" FontAttributes="Bold"
+                               FontSize="Subtitle" TextColor="#0B004C"/>
+
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Check-in:" />
+                            <DatePicker x:Name="dtpck_checkin" TextColor="#0B004C"
+                                        DateSelected="dtpck_checkin_DateSelected"
+                                        Format="dd/MM/yyyy" FontAttributes="Bold"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Check-out:" />
+
+                            <DatePicker x:Name="dtpck_checkout" TextColor="#0B004C"
+                                        Format="dd/MM/yyyy" FontAttributes="Bold"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Button Text="Avançar" Padding="10" Margin="10"
+                        BackgroundColor="#0B004C"
+                        TextColor="#ffffff" FontSize="22" FontAttributes="Bold"
+                        BorderWidth="1" Clicked="Button_Clicked" />
+
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>

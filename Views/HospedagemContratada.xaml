@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0B004C">
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Spacing="1" Padding="10">
+
+        <Label/>
+
+        <Label Text="Confira as informações de sua estadia:" TextColor="#ffffff"
+               FontSize="24" HorizontalTextAlignment="Center"/>
+
+        <Frame Margin="10">
+
+            <VerticalStackLayout>
+                <Label Text="Quarto executivo" TextColor="#0B004C"
+       FontSize="20" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                <Label Text="" TextColor="#0B004C"
+FontSize="20" HorizontalTextAlignment="Center"/>
+
+                <Grid ColumnDefinitions="*,*,*,*"
+                          RowDefinitions="Auto">
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Adultos:"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="1" TextColor="#0B004C" FontAttributes="Bold"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Crianças:"/>
+                    <Label Grid.Row="0" Grid.Column="3" Text="0" TextColor="#0B004C" FontAttributes="Bold"/>
+
+                </Grid>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+        <Frame Margin="10">
+
+            <Grid ColumnDefinitions="*,*,*"
+                  RowDefinitions="Auto,Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="10/11/2024" TextColor="#0B004C" FontAttributes="Bold"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="11/11/2024" TextColor="#0B004C" FontAttributes="Bold"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="1 dia" TextColor="#0B004C" FontAttributes="Bold"/>
+            </Grid>
+            
+        </Frame>
+
+        <Frame Margin="10">
+
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Valor total:"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="R$ 1.300,00"
+                       TextColor="#0B004C" FontAttributes="Bold"/>
+          
+            </Grid>
+          
+        </Frame>
+
+        <HorizontalStackLayout>
+
+            <Button Text="Voltar" Margin="10" Padding="15" BackgroundColor="red"
+        FontAttributes="Bold" BorderColor="White" BorderWidth="1" FontSize="20"
+        Clicked="Button_Clicked"/>
+
+            <Button Text="Confirmar reserva" Margin="10" Padding="15"
+                BorderColor="White" BorderWidth="1"
+                BackgroundColor="#030018" TextColor="#ffffff"
+                FontSize="20" FontAttributes="Bold"
+                />
+        
+        
+
+        </HorizontalStackLayout>
+
+
+    </VerticalStackLayout>
+
+
+
+</ContentPage>
